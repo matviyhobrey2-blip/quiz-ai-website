@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brilliant Quiz</title>
+    <title>Neural Quest — AI Quiz</title>
     <meta
       name="description"
-      content="A modern and stylish quiz website with a premium interface and interactive JavaScript."
+      content="Швидкий та стильний квіз про AI, історію штучного інтелекту та Marvel-подібні системи типу J.A.R.V.I.S."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,13 +23,13 @@
     <header class="topbar">
       <div class="container nav-wrap">
         <div class="brand">
-          <span class="brand-mark">B</span>
-          <span>Brilliant Quiz</span>
+          <span class="brand-mark">AI</span>
+          <span>Neural Quest</span>
         </div>
         <nav class="main-nav">
-          <a href="#quiz">Quiz</a>
-          <a href="#features">Features</a>
-          <a href="#results">Results</a>
+          <a href="#quiz">Квіз</a>
+          <a href="#features">AI</a>
+          <a href="#results">Результат</a>
         </nav>
       </div>
     </header>
@@ -37,43 +37,61 @@
     <main class="container page-shell">
       <section class="hero">
         <div class="hero-copy">
-          <span class="eyebrow">Smart • Fun • Fast</span>
-          <h1>Turn knowledge into a thrilling challenge.</h1>
-          <p>
-            Step into a sleek quiz experience designed to test your brain,
-            sharpen your focus, and keep you coming back for more.
+          <span class="eyebrow reveal-line">AI • Майбутнє • Геній</span>
+          <h1 class="hero-title">
+            <span class="word">Перевір</span>
+            <span class="word">свій</span>
+            <span class="word">розум</span>
+            <span class="word">у</span>
+            <span class="word">світі</span>
+            <span class="word">AI.</span>
+          </h1>
+          <p class="reveal-text">
+            Дізнайся трохи про штучний інтелект, його історію та технології,
+            які вже змінюють світ. І на кінець — питання про J.A.R.V.I.S.
+            і Тоні Старка.
           </p>
 
-          <div class="quick-stats">
+          <div class="quick-stats reveal-up">
             <div class="stat-box">
               <strong>5</strong>
-              <span>Questions</span>
+              <span>питань</span>
             </div>
             <div class="stat-box">
-              <strong>15s</strong>
-              <span>Per round</span>
+              <strong>10с</strong>
+              <span>на відповідь</span>
             </div>
             <div class="stat-box">
-              <strong>100%</strong>
-              <span>Fun factor</span>
+              <strong>AI</strong>
+              <span>розум</span>
             </div>
           </div>
 
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#quiz">Start Quiz</a>
-            <button class="btn btn-secondary" id="restartBtn" type="button">Restart</button>
+          <div class="cta-row reveal-up">
+            <a class="btn btn-primary" href="#quiz">Почати</a>
+            <button class="btn btn-secondary" id="restartBtn" type="button">Заново</button>
+          </div>
+        </div>
+
+        <div class="armor-panel" aria-hidden="true">
+          <div class="armor-shell">
+            <div class="armor-core">
+              <div class="visor">
+                <span>AI</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="quiz-card" id="quiz">
           <div class="quiz-topbar">
             <div>
-              <p class="mini-label">Question</p>
+              <p class="mini-label">Питання</p>
               <h2 id="questionNumber">1 / 5</h2>
             </div>
             <div class="timer-pill">
               <span class="timer-dot"></span>
-              <span id="timerText">15s</span>
+              <span id="timerText">10с</span>
             </div>
           </div>
 
@@ -87,19 +105,19 @@
 
       <section class="feature-strip" id="features">
         <article class="feature-box">
-          <div class="feature-icon">⚡</div>
-          <h3>Instant feedback</h3>
-          <p>See what is correct and learn as you go.</p>
+          <div class="feature-icon">🧠</div>
+          <h3>Історія AI</h3>
+          <p>Коротко про те, як все починалося.</p>
         </article>
         <article class="feature-box">
-          <div class="feature-icon">🎯</div>
-          <h3>Timed rounds</h3>
-          <p>Feel the adrenaline and keep your reflexes sharp.</p>
+          <div class="feature-icon">🤖</div>
+          <h3>Машинне навчання</h3>
+          <p>Як комп’ютер вчиться на даних та покращує результат.</p>
         </article>
         <article class="feature-box">
-          <div class="feature-icon">🏆</div>
-          <h3>Score summary</h3>
-          <p>Get a final result with personalized feedback.</p>
+          <div class="feature-icon">🚀</div>
+          <h3>Майбутнє</h3>
+          <p>Про розумні системи, які вже поруч з нами.</p>
         </article>
       </section>
     </main>
