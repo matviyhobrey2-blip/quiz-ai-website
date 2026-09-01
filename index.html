@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brilliant Quiz</title>
+    <meta
+      name="description"
+      content="A modern and stylish quiz website with a premium interface and interactive JavaScript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <span class="brand-mark">B</span>
+          <span>Brilliant Quiz</span>
+        </div>
+        <nav class="main-nav">
+          <a href="#quiz">Quiz</a>
+          <a href="#features">Features</a>
+          <a href="#results">Results</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Smart • Fun • Fast</span>
+          <h1>Turn knowledge into a thrilling challenge.</h1>
+          <p>
+            Step into a sleek quiz experience designed to test your brain,
+            sharpen your focus, and keep you coming back for more.
+          </p>
+
+          <div class="quick-stats">
+            <div class="stat-box">
+              <strong>5</strong>
+              <span>Questions</span>
+            </div>
+            <div class="stat-box">
+              <strong>15s</strong>
+              <span>Per round</span>
+            </div>
+            <div class="stat-box">
+              <strong>100%</strong>
+              <span>Fun factor</span>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#quiz">Start Quiz</a>
+            <button class="btn btn-secondary" id="restartBtn" type="button">Restart</button>
+          </div>
+        </div>
+
+        <div class="quiz-card" id="quiz">
+          <div class="quiz-topbar">
+            <div>
+              <p class="mini-label">Question</p>
+              <h2 id="questionNumber">1 / 5</h2>
+            </div>
+            <div class="timer-pill">
+              <span class="timer-dot"></span>
+              <span id="timerText">15s</span>
+            </div>
+          </div>
+
+          <div class="progress-bar" aria-label="Quiz progress">
+            <span id="progressFill"></span>
+          </div>
+
+          <div id="quizContent"></div>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="features">
+        <article class="feature-box">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant feedback</h3>
+          <p>See what is correct and learn as you go.</p>
+        </article>
+        <article class="feature-box">
+          <div class="feature-icon">🎯</div>
+          <h3>Timed rounds</h3>
+          <p>Feel the adrenaline and keep your reflexes sharp.</p>
+        </article>
+        <article class="feature-box">
+          <div class="feature-icon">🏆</div>
+          <h3>Score summary</h3>
+          <p>Get a final result with personalized feedback.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
