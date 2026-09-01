@@ -1,43 +1,43 @@
 const quizData = [
   {
-    category: "General Knowledge",
-    question: "Which planet is known as the Red Planet?",
-    options: ["Venus", "Mars", "Jupiter", "Mercury"],
+    category: "Історія AI",
+    question: "Хто вважається одним із засновників сучасного комп’ютерного мислення та ранніх ідей про штучний інтелект?",
+    options: ["Алан Тюрінг", "Стів Джобс", "Білл Гейтс", "Ада Лавлейс"],
+    answer: 0,
+    explanation: "Алан Тюрінг сильно вплинув на розвиток теорії обчислень та ідей про AI."
+  },
+  {
+    category: "Історія AI",
+    question: "У якому році відбулася конференція в Дартмуті, яка вважається початком AI як науки?",
+    options: ["1949", "1956", "1968", "1982"],
     answer: 1,
-    explanation: "Mars appears red because its surface is rich in iron oxide, or rust."
+    explanation: "1956 рік вважається роком народження штучного інтелекту."
   },
   {
-    category: "Science",
-    question: "What gas do plants absorb from the atmosphere?",
-    options: ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
-    answer: 2,
-    explanation: "Plants take in carbon dioxide during photosynthesis and release oxygen."
-  },
-  {
-    category: "History",
-    question: "Who was the first president of the United States?",
-    options: ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
-    answer: 1,
-    explanation: "George Washington served as the first U.S. president from 1789 to 1797."
-  },
-  {
-    category: "Technology",
-    question: "What does HTML stand for?",
+    category: "Машинне навчання",
+    question: "Що в першу чергу вміє робити машинне навчання?",
     options: [
-      "HyperText Markup Language",
-      "HighText Machine Language",
-      "Hyper Transfer Markup Logic",
-      "Home Tool Markup Language"
+      "Швидше зберігати файли",
+      "Вчитися на даних",
+      "Замінювати все обладнання",
+      "Вимикати комп’ютер"
     ],
-    answer: 0,
-    explanation: "HTML is the standard markup language used to create web pages."
+    answer: 1,
+    explanation: "Машинне навчання допомагає системам знаходити закономірності в даних."
   },
   {
-    category: "Math",
-    question: "What is 12 × 8?",
-    options: ["96", "88", "104", "92"],
+    category: "AI та роботика",
+    question: "Яка технологія допомагає комп’ютерам обробляти інформацію шарами, як людський мозок?",
+    options: ["Нейронні мережі", "Масиви JavaScript", "USB-порти", "Бінарні дерева"],
     answer: 0,
-    explanation: "12 multiplied by 8 equals 96."
+    explanation: "Нейронні мережі створені для роботи з інформацією через багато шарів."
+  },
+  {
+    category: "Marvel / AI",
+    question: "У світі Marvel, яка AI-помічниця була першою системою Тоні Старка перед F.R.I.D.A.Y.?",
+    options: ["J.A.R.V.I.S.", "HAL 9000", "Cortana", "Samantha"],
+    answer: 0,
+    explanation: "J.A.R.V.I.S. була першою AI-помічницею Тоні Старка, а потім з’явилася F.R.I.D.A.Y."
   }
 ];
 
@@ -49,14 +49,14 @@ const restartBtn = document.getElementById("restartBtn");
 
 let currentQuestionIndex = 0;
 let score = 0;
-let timeLeft = 15;
+let timeLeft = 10;
 let timerId = null;
 let answered = false;
 
 function resetQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-  timeLeft = 15;
+  timeLeft = 10;
   answered = false;
   clearInterval(timerId);
   renderQuestion();
@@ -64,7 +64,7 @@ function resetQuiz() {
 
 function startTimer() {
   clearInterval(timerId);
-  timeLeft = 15;
+  timeLeft = 10;
   timerText.textContent = `${timeLeft}s`;
 
   timerId = setInterval(() => {
@@ -138,10 +138,10 @@ function handleAnswer(selectedIndex, timedOut) {
   }
 
   const feedbackText = timedOut
-    ? `Time's up! The correct answer was: ${currentQuestion.options[currentQuestion.answer]}.`
+    ? `Час вийшов! Правильна відповідь: ${currentQuestion.options[currentQuestion.answer]}.`
     : isCorrect
-      ? `Correct! ${currentQuestion.explanation}`
-      : `Not quite. ${currentQuestion.explanation}`;
+      ? `Правильно! ${currentQuestion.explanation}`
+      : `Не зовсім. ${currentQuestion.explanation}`;
 
   const feedbackClass = isCorrect || timedOut ? "success" : "error";
 
@@ -163,14 +163,14 @@ function handleAnswer(selectedIndex, timedOut) {
 
 function renderResult() {
   const percent = Math.round((score / quizData.length) * 100);
-  let resultText = "Great effort!";
+  let resultText = "Молодець!";
 
   if (percent >= 80) {
-    resultText = "Excellent work! You are a quiz expert.";
+    resultText = "Чудово! Ти справжній фанат AI.";
   } else if (percent >= 50) {
-    resultText = "Nice job! You know your stuff.";
+    resultText = "Непогано! У тебе добрий розум для технологій.";
   } else if (percent >= 30) {
-    resultText = "Solid try! A little more practice will make you shine.";
+    resultText = "Гарна спроба! AI тільки набирає обертів.";
   }
 
   questionNumber.textContent = "Finished";
@@ -179,13 +179,14 @@ function renderResult() {
 
   quizContent.innerHTML = `
     <div class="result-card">
-      <span class="result-badge">Final score</span>
+      <span class="result-badge">Результат AI</span>
       <div class="score-value">${score}/${quizData.length}</div>
       <p>${resultText}</p>
-      <p>You answered ${percent}% of the questions correctly.</p>
+      <p>Ти вгадав ${percent}% відповідей.</p>
+      <p>Фінальна думка: J.A.R.V.I.S. — це вигадка, але AI вже реально змінює світ.</p>
 
       <div class="result-actions">
-        <button class="btn btn-primary" type="button" id="playAgainBtn">Play Again</button>
+        <button class="btn btn-primary" type="button" id="playAgainBtn">Грати ще</button>
       </div>
     </div>
   `;
